@@ -6,9 +6,21 @@ plugins {
 android {
     compileSdk 33
 
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+    }
+
     defaultConfig {
         applicationId "com.example.jetlearning"
-        minSdk 21
+        minSdk 26
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -46,8 +58,8 @@ android {
 }
 
 dependencies {
-    //Jsoup
-    implementation "org.jsoup:jsoup:1.13.1"
+    //HtmlUnit
+    implementation("net.sourceforge.htmlunit:htmlunit-android:2.63.0")
     //Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
     implementation 'androidx.core:core-ktx:1.9.0'

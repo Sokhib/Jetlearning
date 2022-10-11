@@ -4,6 +4,7 @@
     package="com.example.jetlearning">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -34,6 +35,20 @@
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Jetlearning" />
+
+        <service
+            android:name=".SebTrackerService"
+            android:enabled="true"
+            android:stopWithTask="false" />
+
+        <receiver
+            android:name=".RestarterReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="restartservice" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
