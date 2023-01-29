@@ -1,6 +1,5 @@
 package com.example.jetlearning
 
-import android.R
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -30,6 +29,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.jetlearning.ui.theme.JetlearningTheme
+import android.R as RUi
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,7 +77,7 @@ fun PulsateEffect() {
 
         ) {
             Image(
-                painter = painterResource(id = R.drawable.ic_dialog_email),
+                painter = painterResource(id = RUi.drawable.ic_dialog_email),
                 contentDescription = null
             )
         }
