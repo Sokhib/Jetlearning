@@ -15,6 +15,9 @@ class SebTrackerService : Service() {
     private val scope = CoroutineScope(Dispatchers.IO + job)
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         val url = "https://reserve-prime.apple.com/AE/en_AE/reserve/A/availability?iUP=N"
+        val notTakingReservation =
+            "We’re not taking reservations to buy iPhone in the store right now."
+        val canPurchase = "You can now purchase your iPhone without a reservation."
 
         scope.launch {
             delay(5000)
@@ -27,7 +30,7 @@ class SebTrackerService : Service() {
                 withContext(Dispatchers.IO) {
                     val text = webClient.getPage<HtmlPage>(url).asNormalizedText()
                     val isAvailable =
-                        text.contains("We’re not taking reservations to buy iPhone in the store right now.")
+                        text.contains(notTakingReservation).not() && text.contains(canPurchase)
                             .not()
 
                     Log.d("TAG", "isPhoneAvailable: $isAvailable")
