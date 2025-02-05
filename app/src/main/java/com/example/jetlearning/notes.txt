@@ -1,0 +1,41 @@
+1. With the help of the PreviewParameterProvider we can create multiple previews.
+2. stringResource and pluralStringResource can be used to get strings from strings.xml
+3. dimensionResource(R.dimen.fontSize12).value.sp NOT correct use .toSp()
+4. Theme -> If theme is @Stable means that all the listeners get notified once parameter iin this theme changes.
+5. @Immutable means parameter in the theme is NOT changeable.
+6. Order of the modifiers matters
+7. Use VisualTransformation for decimals, money, password and all
+8. Compose parameter order:
+    a) mandatory ones
+    b) non-mandatory ones starting with modifier
+    c) Lastly @Composable, Scope, or content
+
+9. We can create grouping for parameters
+10. We can limit @Composable with the scope.Ex:
+ @Composable
+ fun ColumnScope.ElementsOfBattle(){}
+
+
+
+
+
+TODO:// Check for the post for the own design system theme.
+
+
+
+QUESTIONS:
+
+What is Modifier.semantics?
+What does propagateMinConstraints do?
+What is the different between imageResource, painterResource and vectorResource in compose
+How grouping of the parameters done?
+    - ButtonDefaults.elevation()
+    - ButtonDefaults.ContentPadding
+    - ButtonDefaults.buttonColors()
+What are the options for KeyboardActions
+Check deeply IntrinsicSize...
+
+
+
+Left:
+https://youtu.be/JK8va2xsyR0?list=PLjLCGE4bVpHBSVXfbnCjc_OQlxknD1crx&t=4610
