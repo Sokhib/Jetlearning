@@ -1,0 +1,4 @@
+QAs:
+What if I want recomposition happen only on Text(counter), but not others inside block... How to achieve and handle hierarchy...
+Android Advanced #1: Architecture in small teams Part 1-2 --> explained detailed Archs *(recommended to watch)
+Check details with codelabs how UI testing is DONE.
