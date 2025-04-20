@@ -1,0 +1,11 @@
+Check/Run and see AnimatedContentV2Counter
+Check/Run and see AnimatedContentV3Counter
+Watch:
+    Compose performance gotchas talk
+    Drawing in Compose talk
+    Google Animations codelab
+
+QAs:Check out how AnimateAsRotation is DONE is Practice videos
+
+
+
