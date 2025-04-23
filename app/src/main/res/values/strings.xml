@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Jetlearning</string>
     <string name="title_activity_seb_tracker">SebTracker</string>
+    <string name="form_screen_title">User Information</string>
+    <string name="details_screen_title">User Details</string>
+    <string name="name_label">Name</string>
+    <string name="surname_label">Surname</string>
+    <string name="submit_button">Submit</string>
+    <string name="back_button">Back</string>
+    <string name="name_placeholder">Enter your name</string>
+    <string name="surname_placeholder">Enter your surname</string>
+    <string name="user_details_format">Name: %1$s\nSurname: %2$s</string>
 </resources>
